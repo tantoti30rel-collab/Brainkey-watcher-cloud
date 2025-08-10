@@ -2,9 +2,12 @@ import requests
 import time
 
 # Konfigurasi
-TELEGRAM_TOKEN = "8445382217:AAHUf4vyrhypYm-eUUAFu-y5E1YmmW7G1mQ"
-CHAT_ID = "8355376419"
-FINNHUB_API_KEY = "d2a1bkpr01qvhsfvktegd2a1bkpr01qvhsfvktf0"
+import os
+
+# Konfigurasi lewat Environment Variables
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
+FINNHUB_API_KEY = os.getenv("FINNHUB_API_KEY", "")
 
 # Daftar aset
 ASSETS = {
